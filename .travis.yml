@@ -1,2 +1,7 @@
 language: node_js
 Node.js: v16.14.0.
+dist: trustyaddons:
+  sonarcloud:
+    organization: "your-sonar-organization-name" # To find your organization, go to: https://sonarcloud.io/account/organizationsscript:
+  # Put before sonar-scanner your other script steps
+  - sonar-scanner -Dsonar.verbose=true -X

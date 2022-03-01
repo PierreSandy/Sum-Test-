@@ -1,7 +1,12 @@
 language: node_js
 Node.js: v16.14.0.
 dist: trustyaddons:
+addons:
   sonarcloud:
-    organization: "your-sonar-organization-name" # To find your organization, go to: https://sonarcloud.io/account/organizationsscript:
-  # Put before sonar-scanner your other script steps
-  - sonar-scanner -Dsonar.verbose=true -X
+    organization: "carlosramonhenry1"
+    token:
+      secure: "**************************" # encrypted value of your token
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - sonar-scanner
